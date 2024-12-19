@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karel Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(10, 40px);
+            grid-template-rows: repeat(10, 40px);
+            gap: 1px;
+            margin: 20px auto;
+            width: fit-content;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .karel {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Karel Game</h1>
+    <div id="game-board"></div>
+    <textarea id="commands" rows="10" cols="30" placeholder="Zadejte příkazy..."></textarea>
+    <br>
+    <button onclick="executeCommands()">Spustit</button>
+        <button onclick="repeatCommands()">Spustit znovu</button>
+        <button onclick="resetBoard()">Reset</button>
+
+    <script src="karel.js"></script>
+</body>
+</html>
